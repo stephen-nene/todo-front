@@ -10,7 +10,7 @@ function AddTodo({ profileData }) {
   }, [profileData.session]);
 
   const addTodo = () => {
-    fetch("http://localhost:3000/todos", {
+    fetch("https://todos-yf5l.onrender.com/todos", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
