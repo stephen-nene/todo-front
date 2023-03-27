@@ -1,0 +1,82 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .todos {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 80%;
+  }
+
+  .title {
+    font-weight: bold;
+    border: none;
+    outline: none;
+    width: 100%;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+
+  button {
+    margin: 0 5px;
+    width: 10rem;
+    padding: 5px;
+    border: 2px solid;
+    background-color: transparent;
+    border-radius: 30px;
+  }
+
+  .summary {
+    border: none;
+    outline: none;
+    width: 100%;
+    opacity: 0.8;
+  }
+
+  .icons {
+    width: 24px;
+    height: 24px;
+  }
+
+  #update {
+    order: 1;
+    /* color: black; */
+
+    border-color: aquamarine;
+  }
+
+  #update:hover {
+      border: 2px solid aquamarine;
+      background-color:aquamarine;
+  }
+
+  #delete {
+    order: 2;
+    background-color: transparent;
+    border-color: rgb(194, 101, 101);
+  }
+  #delete:hover {
+    background-color: rgb(194, 101, 101);
+    border: 2px solid rgb(194, 101, 101);
+  }
+  #done {
+
+    background-color: transparent;
+    border-color: green;
+  }
+
+  #done:hover {
+    background-color: darkgreen;
+    border: 2px solid darkgreen;
+  }
+
+
