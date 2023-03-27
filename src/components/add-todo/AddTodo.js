@@ -26,6 +26,7 @@ function AddTodo({ profileData }) {
       .then((response) => response.json())
       .then((data) => {
         console.log("New Todo created: ", data);
+        alert(data.message, "in createing task")
         // TODO: handle successful creation of new Todo
       })
       .catch((error) => {

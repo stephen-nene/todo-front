@@ -33,7 +33,7 @@ export default function Login({handleLogin}) {
         } else {
           // handle failed login
           if (response.status === 401) {
-            console.error('Invalid username/email or password');
+            alert('Invalid username/email or password');
           } else {
             console.error('Failed to log in');
           }
