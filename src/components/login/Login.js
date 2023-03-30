@@ -28,6 +28,7 @@ export default function Login({handleLogin}) {
         if (response.ok) {
           response.json().then(data => {
             handleLogin(data.data);
+            console.log(userData);
             setUserdata(data.data);
           }).catch(error => console.error(error));
         } else {
@@ -48,7 +49,7 @@ export default function Login({handleLogin}) {
     console.log(`signing up: \nusername: ${username}\nemail: ${email}\npassword: ${password}`);
 
     try {
-      const response = await fetch("/signup", {
+      const response = await fetch("https://todos-yf5l.onrender.com/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
