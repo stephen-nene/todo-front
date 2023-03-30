@@ -1,6 +1,8 @@
 import React from "react";
 import buggati from "../../images/bugatti4.webp";
 
+// id to be a random number from 1-8
+
 function Profile({ setIsLoggedIn, profileData }) {
 
   const handleLogout = () => {
