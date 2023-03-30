@@ -6,8 +6,8 @@ function Profile({ setIsLoggedIn, profileData }) {
   const handleLogout = () => {
     setIsLoggedIn(false)
     // Implement your logout logic here
-    console.log("User logged out");
-    console.log(profileData.user);
+    alert("will be logout now");
+    // console.log(profileData.user);
   };
 
   return (

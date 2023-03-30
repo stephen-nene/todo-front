@@ -16,7 +16,7 @@ export default function Login({handleLogin}) {
       password: password
     };
 
-    fetch('/login', {
+    fetch('https://todos-yf5l.onrender.com/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -31,11 +31,12 @@ export default function Login({handleLogin}) {
             setUserdata(data.data);
           }).catch(error => console.error(error));
         } else {
+          console.log(response);
           // handle failed login
           if (response.status === 401) {
             alert('Invalid username/email or password');
           } else {
-            console.error('Failed to log in');
+            alert('Failed to log in');
           }
         }
       }).catch(error => console.error(error));
@@ -47,7 +48,7 @@ export default function Login({handleLogin}) {
     console.log(`signing up: \nusername: ${username}\nemail: ${email}\npassword: ${password}`);
 
     try {
-      const response = await fetch("http://localhost:3000/signup", {
+      const response = await fetch("/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

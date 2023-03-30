@@ -9,16 +9,16 @@ export default function Home({ userId }) {
 
   useEffect(() => {
     refresh();
-  }, []);
+  });
 
   const deleteTodo = (id) => {
-    fetch(`http://localhost:3000/todos/${id}`, { method: "DELETE" })
+    fetch(`https://todos-yf5l.onrender.com/todos/${id}`, { method: "DELETE" })
       .then((response) => {
         if (response.status === 204) {
           setTodos((prevTodos) =>
             prevTodos.filter((todo) => todo.id !== id)
           );
-          console.log("Delete todo successful");
+          alert("Delete todo successful");
         } else {
           throw new Error("Delete todo failed");
         }
@@ -41,11 +41,11 @@ export default function Home({ userId }) {
         todo.id === id ? { ...todo, editing: false } : todo
       )
     );
-    console.log("done editing Todo successful");
+    alert("done editing Todo successful");
   };
 
   const refresh = () => {
-    fetch(`http://localhost:3000/todos?user_id=${userId}`)
+    fetch(`https://todos-yf5l.onrender.com/todos?user_id=${userId}`)
       .then((response) => {
         if (!response.ok) {
           throw Error(response.statusText);
@@ -54,7 +54,7 @@ export default function Home({ userId }) {
       })
       .then((data) => {
         setTodos(data.data);
-        console.log("refreshed todos:", data);
+        // console.log("refreshed todos:", data);
       })
       .catch((error) => console.error(error));
   };
